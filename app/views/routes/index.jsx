@@ -1,21 +1,18 @@
-import React                                        from 'react';
+import React                              from 'react';
 import { Router, Route, Redirect, browserHistory }  from 'react-router';
-import ApplicationContainer                         from 'app/views/containers/application_container';
-import SecuredContentContainer                      from 'app/views/containers/secured_content_container';
-import LoginContainer                               from 'app/views/containers/login_container';
-import HomeContainer                                from 'app/views/containers/home_container';
+import ApplicationContainer               from 'app/views/app/application-container/index.jsx';
+import ExpensesContainer                  from 'app/views/expenses/expenses-container/index.jsx';
+import GridContainer                      from 'app/views/grid/index.jsx';
 
 
 export default function renderRoutes(store) {
   return (
     <Router history={browserHistory}>
-      <Redirect from="/" to="/home" />
-      <Route path="/" component={ApplicationContainer}>
-        <Route component={SecuredContentContainer} >
-          <Route path="home" component={HomeContainer} />
-        </Route>
-        <Route path="login" component={LoginContainer} />
+      <Redirect from='/' to='/expenses' />
+      <Route path="" component={ApplicationContainer} >
+        <Route path="/expenses" component={ExpensesContainer} />
       </Route>
+      <Route path="/grid" component={GridContainer} />
     </Router>
   );
 }

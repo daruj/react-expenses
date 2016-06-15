@@ -34,8 +34,8 @@ const webpackConfig = {
         ]
       },
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules') },
-      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules!stylus-loader') },
+      { test: /\.css$/,  loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules') },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules!sass-loader') },
       { test: /\.png/, loader: 'file-loader?mimetype=image/png' },
       { test: /\.jpg/, loader: 'file' },
       { test: /\.gif/, loader: 'file' },
@@ -46,7 +46,7 @@ const webpackConfig = {
   },
   resolve: {
     // Needed so you can require("a") instead of require("a.jsx")
-    extensions: ['', '.js', '.jsx', '.json', '.styl'],
+    extensions: ['', '.js', '.jsx', '.json', '.scss'],
     // Let us do things like require("app/reducers/application")
     root: __dirname,
     alias: {

@@ -1,5 +1,5 @@
-@import '~app/assets/stylesheets/normalize'
-@import '~app/assets/stylesheets/glyphicons'
+@import '~app/assets/stylesheets/variables.scss';
+@import '~app/assets/stylesheets/normalize.scss';
 
 :global {
 
@@ -20,7 +20,7 @@
     position: relative;
     font-family: 'ProximaNova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
-    // background-color: #F0EFEF;
+    background-color: $sky-gray;
   }
 
   a {
@@ -39,4 +39,5 @@
   * {
     box-sizing: border-box;
   }
+
 }

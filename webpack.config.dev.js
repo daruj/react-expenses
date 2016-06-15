@@ -38,7 +38,7 @@ const webpackConfig = {
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader', 'babel-loader'] },
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.css$/,  loader: 'style-loader!css-loader?modules' },
-      { test: /\.styl$/, loader: 'style-loader!css-loader?modules!stylus-loader' },
+      { test: /\.scss$/, loader: 'style-loader!css-loader?modules!sass-loader' },
       { test: /\.png/, loader: 'file-loader?mimetype=image/png' },
       { test: /\.jpg/, loader: 'file' },
       { test: /\.gif/, loader: 'file' },
@@ -50,7 +50,7 @@ const webpackConfig = {
   resolve: {
 
     // Needed so you can require("a") instead of require("a.jsx")
-    extensions: ['', '.js', '.jsx', '.json', '.css', '.styl'],
+    extensions: ['', '.js', '.jsx', '.json', '.css', '.scss'],
 
     // Let us do things like require("app/reducers/application")
     root: __dirname,

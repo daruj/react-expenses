@@ -1,0 +1,14 @@
+@import '~app/assets/stylesheets/variables.scss';
+
+.content {
+  padding: 7px;
+  background: $disabled-field;
+  color: $black;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  text-align: center;
+}

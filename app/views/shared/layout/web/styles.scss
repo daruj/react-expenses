@@ -1,0 +1,26 @@
+@import '~app/assets/stylesheets/variables.scss';
+
+$header-background-color: $natural-blue;
+$footer-background-color: $natural-blue;
+
+.mainContent {
+  height: 100%;
+}
+
+.centerContent {
+  width: 100%;
+  max-width: 1024px;
+}
+
+.header {
+  padding: 20px 10px;
+  color: $white;
+  background-color: $header-background-color;
+}
+
+.footer {
+  padding: 10px;
+  color: $white;
+  text-align: center;
+  background-color: $footer-background-color;
+}
